@@ -1,0 +1,173 @@
+/* Declaring CSS variable */
+body{
+  /* Colors */
+  --main_text:  #573873 ;
+  --main_hover: #D3E78E ;
+  --anime_hover: white ;
+  --main_sort_text: #318C63 ;
+  --nav_bg: rgba(167, 104,157, .7);  
+  --wrapper_bg: rgba(209,217,230,.5);
+  --status_bg: rgba(209,217,230,.0);
+  --status_title: #613A73 ; 
+  --border: white;
+  --plus_button: #6E3B4E ;
+  --active_button: #7B245B;
+}
+
+/* Hiding the standard logo's */
+#cover-image, a.header-title, div.btn-menu, .initialize-tutorial, #copyright, #footer-block{
+  display: none !important;
+}
+
+
+
+  /* Styling the main background */
+body{
+  background-size: cover;
+  display: static !important;
+}
+
+
+    /* Styling the main wrapper */
+.list-container {
+  background-color: var(--wrapper_bg)!important;
+  margin-top: 400px;
+}
+
+
+        /* Styling status bar*/
+.list-status-title{
+  background-color: var(--status_bg) !important;
+}
+
+.text{
+  color: var(--status_title) !important;
+  opacity: 0.7;
+}
+
+.list-status-title a{
+  color: var(--status_title) !important;
+}
+
+      /* Styling the navigation */
+    
+#status-menu{
+  background-color: var(--nav_bg);
+}
+
+#status-menu a{
+  color: var(--anime_hover) !important;
+}
+
+#status-menu a:hover{
+  color: var(--main_hover) !important;
+}
+
+/* The active button */
+#status-menu a.on{
+  color: var(--active_button) !important;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 0px 5px;
+  height: 20%;
+}
+
+/* Stop if from moving when scrolling */
+.status-menu-container.fixed{
+  position: static;
+}
+
+
+.status-menu-container .status-menu .status-button:after{
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+
+      /* Stlying sorting bar */
+      
+.list-table-header th{
+  background-color: var(--status_bg) !important;
+  border-top: 1px solid var(--border);
+  color: var(--main_sort_text) !important;
+}
+
+.list-table-header th a{
+  color: var(--main_sort_text) !important;  
+}
+
+.list-table-header th a:hover{
+  color: var(--main_text) !important;  
+}
+
+
+         /* Styling anime */
+         
+/* The anime name */
+.list-table .list-item .list-table-data .data .link{
+  color: var(--main_text) !important;
+}
+
+.list-table .list-item .list-table-data:hover .data .link{
+  color: var(--anime_hover) !important;
+}
+
+.list-table .list-item .list-table-data .data .link:hover{
+  color: var(--main_hover) !important;
+}
+/* The 'edit' link (only visible to owner of the list) */
+.data .add-edit-more .edit .List_LightBox{
+ color: var(--main_text) !important; 
+}
+
+.list-table-data:hover .data .add-edit-more .edit .List_LightBox {
+  color: var(--anime_hover) !important;
+}
+
+
+/* The 'more' link */
+.data .add-edit-more .more a{
+  color: var(--main_text) !important;
+}
+
+.list-table-data:hover .data .add-edit-more .more a {
+  color: var(--anime_hover) !important;
+}
+
+/* HOVER OVER ANIME LINE */
+.list-table-data:hover{
+  background-color: var(--nav_bg);
+}
+
+/* Type and progress text (NOT THE HEADER, but in the anime) */
+.list-table-data{
+color: var(--main_text) !important;
+}
+
+.list-table-data:hover{
+color: var(--anime_hover) !important;
+}
+
+/* The + button */
+.list-table .list-table-data .data a i{
+  color: var(--anime_hover) !important;
+}
+
+
+.list-table .list-table-data:hover .data a i{
+  color: var(--plus_button) !important;
+}
+
+.list-table .list-table-data .data a i:hover{
+  color: var(--main_sort_text) !important;
+}
+
+/* The 'add' button (only visible to visitors) */
+
+.data .add-edit-more .add a{
+  color: var(--main_text) !important;
+}
+
+.list-table-data:hover .data .add-edit-more .add a {
+  color: var(--anime_hover) !important;
+}
