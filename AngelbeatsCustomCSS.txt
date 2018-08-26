@@ -4,10 +4,13 @@ body{
   --main_text:  #573873 ;
   --main_hover: #D3E78E ;
   --anime_hover: white ;
-  --main_sort_text: #318C63 ;
+  --main_sort_text: #318C63;
   --nav_bg: rgba(167, 104,157, .7);  
   --wrapper_bg: rgba(209,217,230,.5);
   --status_bg: rgba(209,217,230,.0);
+  --solid_bg: #473F88 ;
+  --filter_buttons: #2F2B78 ;
+  --filter_btn_hover: #072762 ;
   --status_title: #613A73 ; 
   --border: white;
   --plus_button: #6E3B4E ;
@@ -39,15 +42,22 @@ body{
 .list-status-title{
   background-color: var(--status_bg) !important;
 }
-
+/* title Showing the current page*/
 .text{
   color: var(--status_title) !important;
   opacity: 0.7;
 }
-
+/* Stat and filter link */
 .list-status-title a{
+  transition-delay: 0.08s;
   color: var(--status_title) !important;
 }
+
+.list-status-title a:hover{
+  border-bottom: 2px solid var(--status_title);
+  padding-bottom: 2px;
+}
+
 
       /* Styling the navigation */
     
@@ -72,9 +82,15 @@ body{
   height: 20%;
 }
 
-/* Stop if from moving when scrolling */
+/* Stop the bar from moving up when scrolling */
 .status-menu-container.fixed{
   position: static;
+}
+
+/* Stop the list under the navigation bar from moving down when scrolling */
+.list-block{
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
 
@@ -101,7 +117,11 @@ body{
 }
 
 
-         /* Styling anime */
+         /* Styling anime (table rows) */
+  /* Removing the empty space */
+.list-unit.all_anime{
+  width: auto;
+}
          
 /* The anime name */
 .list-table .list-item .list-table-data .data .link{
@@ -133,6 +153,7 @@ body{
 .list-table-data:hover .data .add-edit-more .more a {
   color: var(--anime_hover) !important;
 }
+
 
 /* HOVER OVER ANIME LINE */
 .list-table-data:hover{
@@ -171,3 +192,77 @@ color: var(--anime_hover) !important;
 .list-table-data:hover .data .add-edit-more .add a {
   color: var(--anime_hover) !important;
 }
+
+    /* The more page */
+.td1.borderRBL{
+  padding: 0px 40px;
+  background-color: var(--nav_bg);
+  border-radius: 8px;
+  color: var(--anime_hover);
+  border: 1px solid var(--border);
+}
+
+.td1.borderRBL div a, .td1.borderRBL a{
+  color: var(--active_button) !important;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.td1.borderRBL div a:hover, .td1.borderRBL a:hover{
+  color: var(--main_hover) !important;
+}
+
+    /* Stats - status bar */
+.list-stats{
+  border-top: 1px solid var(--border);
+  background-color: var(--status_bg) !important;
+  color: var(--active_button)!important;
+}
+
+    /* Filters - status bar */
+
+/* Filter wrapper */
+#advanced-options{
+  margin-top: 300px !important;
+  background: var(--solid_bg) /*#a7689d*/;
+}
+
+
+/* apply and clear button */
+#advanced-options .advanced-options-button a{
+  background-color: var(--filter_buttons) !important;
+}
+
+#advanced-options .advanced-options-button a:hover{
+  background-color: var(--filter_btn_hover) !important;
+}
+
+
+/* User sidebar (Only visible to logged in users)*/
+
+/* Wrapper */
+.list-menu-float .icon-menu, .link-list-setting, .link-style-setting{
+  background-color: var(--nav_bg)!important;
+}
+
+/* Icons*/
+.list-menu-float .icon-menu svg.icon{
+  fill: var(--anime_hover);
+}
+
+.list-menu-float .icon-menu:hover svg.icon{
+  fill: var(--main_sort_text);
+}
+
+/* Text when icon is hovered */
+.icon-menu .text, .icon.icon{
+  color: var(--anime_hover) !important;
+}
+
+.icon-menu .text:hover{
+  color: var(--main_hover) !important;
+  
+}
+
+
+/* WHITESPACE */
